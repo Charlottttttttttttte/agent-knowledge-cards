@@ -21,12 +21,7 @@
   #page{max-width:100vw;max-height:100vh;object-fit:contain;user-select:none;-webkit-user-drag:none;transition:opacity .18s;}
   #page.loading{opacity:.35;}
   .zone{position:fixed;top:0;bottom:0;width:30%;z-index:10;}
-  .navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:25;width:52px;height:52px;border-radius:50%;
-    border:2px solid rgba(248,241,220,.7);background:rgba(74,63,48,.55);color:#F8F1DC;font-size:24px;line-height:1;
-    display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
-    box-shadow:0 2px 8px rgba(0,0,0,.25);touch-action:none;user-select:none;-webkit-tap-highlight-color:transparent;}
-  .navbtn:active{background:rgba(74,63,48,.85);}
-  #prevBtn{left:12px;} #nextBtn{right:12px;}
+  #prev{left:0;} #next{right:0;}
   .today-tag{display:inline-block;font-size:13px;color:var(--accent);background:rgba(255,255,255,.6);
     border:1px dashed var(--accent);border-radius:10px;padding:2px 8px;margin-left:8px;}
   #prev{left:0;} #next{right:0;}
@@ -74,8 +69,7 @@
   .xcard-name{font-size:16px;font-weight:700;color:var(--primary);}
   .xcard-link{font-size:12px;color:var(--accent);white-space:nowrap;text-decoration:none;border:1px solid var(--accent);border-radius:8px;padding:2px 8px;}
   .xcard-desc{font-size:14px;color:var(--ink);line-height:1.65;opacity:.85;}
-  /* 拓展页时隐藏两侧翻页箭头，避免遮挡卡片 */
-  body.showing-extra #prevBtn, body.showing-extra #nextBtn{display:none;}
+  /* 拓展页时隐藏两侧翻页区，避免误触 */
 </style>
 </head>
 <body>
@@ -93,8 +87,6 @@
 <div id="stats"></div>
 <div class="zone" id="prev" onclick="nav(-1)"></div>
 <div class="zone" id="next" onclick="nav(1)"></div>
-<button class="navbtn" id="prevBtn" onclick="nav(-1)" aria-label="上一页">‹</button>
-<button class="navbtn" id="nextBtn" onclick="nav(1)" aria-label="下一页">›</button>
 <div id="ind"></div>
 <div id="err">课程内容加载失败，检查网络后刷新</div>
 <script>
