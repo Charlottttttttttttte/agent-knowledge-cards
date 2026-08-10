@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "模型没变，变的只是往窗口里放了什么：放上工具清单+城市+日期，它就能调 API 用真实数据回答。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Context-Management",
+   "desc": "管理和维护 Agent 的上下文，让它在长对话里保持清晰高效——窗口管理就是上下文工程的日常。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FContext-Management"
+  },
+  {
+   "name": "Context-over-Persona",
+   "desc": "「我的上下文」优先于「AI 的人设」——提示词里放什么，决定 AI 更听谁的。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FContext-over-Persona"
+  },
+  {
+   "name": "prompt-engineering",
+   "desc": "单次对话的提示技巧 vs 上下文工程的结构化文件——两者是点与面的关系。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fprompt-engineering"
+  }
  ]
 }

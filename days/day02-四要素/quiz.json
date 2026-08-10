@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "模型只负责“想”：处理、评估、决策都在行；“执行工具、改变外部世界”是工具和编排层的活。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Agent-Skills",
+   "desc": "把领域 know-how 打包成可复用指令文件（SKILL.md）的能力单元——四要素里「编排层」的实战升级版。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Skills"
+  },
+  {
+   "name": "AI-Agent-Deployment",
+   "desc": "把 Agent 从开发环境搬进生产：稳定、可扩展、对外提供服务——四要素之「部署」落地要面对的事。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAI-Agent-Deployment"
+  },
+  {
+   "name": "Agent-Orchestration",
+   "desc": "多 Agent 的分工调度：执行策略、复杂度路由、Swarm 协作、token 预算——从单 Agent 到团队。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Orchestration"
+  }
  ]
 }

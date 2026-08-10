@@ -33,5 +33,22 @@
    "answer": 0,
    "explain": "只有同一套标准、同一个考官，分数才有可比性——一致才是自动化评估的价值所在。"
   }
+ ],
+ "extras": [
+  {
+   "name": "二元评估",
+   "desc": "把评估标准写成 yes/no 是非题而非量表——获得稳定可复现的 LLM 打分信号。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F二元评估"
+  },
+  {
+   "name": "Model-Evaluation",
+   "desc": "从准确率到人类偏好的量化评估框架——LM-as-Judge 是其中的一种打分器。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FModel-Evaluation"
+  },
+  {
+   "name": "Reverse-Questioning",
+   "desc": "让 AI 先追问澄清需求再给方案——避免「考官」判错题的另一种思路。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FReverse-Questioning"
+  }
  ]
 }

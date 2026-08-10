@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "路由让不同任务各走各路：简单活走轻量模型省钱，难题交给聪明模型，省成本又提效。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Secondary-Model",
+   "desc": "为主 Agent 的子 Agent 单独配置底层模型的机制——选型不只是一次选一个，而是分层配。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FSecondary-Model"
+  },
+  {
+   "name": "MoE架构",
+   "desc": "混合专家模型：推理时只激活部分参数，以小算力接近大模型效果——模型侧的路由。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FMoE架构"
+  },
+  {
+   "name": "本地大模型",
+   "desc": "数据不离开本机的本地部署模型——隐私敏感场景下的选型答案。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F本地大模型"
+  }
  ]
 }

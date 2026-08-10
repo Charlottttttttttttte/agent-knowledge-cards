@@ -33,5 +33,22 @@
    "answer": 2,
    "explain": "OpenAPI 描述“API 长什么样”，MCP 解决“模型怎么连上工具”，两者上下游配合、各司其职。"
   }
+ ],
+ "extras": [
+  {
+   "name": "GitHub-MCP",
+   "desc": "GitHub 官方 MCP Server——MCP 在真实开发里的头号落地案例。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FGitHub-MCP"
+  },
+  {
+   "name": "Tool-Use",
+   "desc": "模型按需调用外部工具（API/数据库/解释器）扩展能力——函数调用的本质。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FTool-Use"
+  },
+  {
+   "name": "Skillpack",
+   "desc": "GBrain 中 Agent 按规则自动维护知识图谱的 Skill 集合规范——工具之上的自动化层。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FSkillpack"
+  }
  ]
 }

@@ -33,5 +33,22 @@
    "answer": 2,
    "explain": "循环不是永动机：内部计划完成、最初的使命达成，Agent 才停；转圈数、用户催促、报错都不算。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Plan-Execute-Review",
+   "desc": "规划-执行-评审三层架构：执行团队干活，评审团把关——五步循环加一层质检更稳。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FPlan-Execute-Review"
+  },
+  {
+   "name": "Agent-Loop",
+   "desc": "「调用模型→执行工具→回传结果」的迭代循环，与 Think–Act–Observe 是同一件事的两种说法。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Loop"
+  },
+  {
+   "name": "Long-Running-Task-Execution",
+   "desc": "让 AI 跨会话/多智能体持续完成长任务——单次五步循环之外的持续作战形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FLong-Running-Task-Execution"
+  }
  ]
 }

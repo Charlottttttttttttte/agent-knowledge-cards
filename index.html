@@ -60,6 +60,20 @@
   .srow b{color:var(--primary);}
   .srow .bad{color:var(--accent);font-size:14px;margin-top:4px;line-height:1.5;}
   .sempty{color:var(--gray);font-size:15px;text-align:center;margin-top:60px;line-height:2;}
+  /* Wiki 拓展页 */
+  #extra{position:fixed;inset:0;display:none;flex-direction:column;background:var(--paper);z-index:15;
+    padding:calc(env(safe-area-inset-top) + 70px) 28px calc(env(safe-area-inset-bottom) + 60px);overflow-y:auto;}
+  .xtag{font-size:14px;font-weight:700;letter-spacing:3px;color:var(--accent);margin-bottom:6px;}
+  .xtitle{font-size:22px;font-weight:900;color:var(--primary);margin-bottom:6px;}
+  .xsub{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:22px;}
+  .xcard{background:#fffdf4;border:2px solid rgba(74,63,48,.28);border-radius:12px;
+    padding:14px 16px 12px;margin-bottom:12px;}
+  .xcard-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px;}
+  .xcard-name{font-size:16px;font-weight:700;color:var(--primary);}
+  .xcard-link{font-size:12px;color:var(--accent);white-space:nowrap;text-decoration:none;border:1px solid var(--accent);border-radius:8px;padding:2px 8px;}
+  .xcard-desc{font-size:14px;color:var(--ink);line-height:1.65;opacity:.85;}
+  /* 拓展页时隐藏两侧翻页箭头，避免遮挡卡片 */
+  body.showing-extra #prevBtn, body.showing-extra #nextBtn{display:none;}
 </style>
 </head>
 <body>
@@ -73,6 +87,7 @@
 </header>
 <div id="stage"><img id="page" alt=""></div>
 <div id="quiz"></div>
+<div id="extra"></div>
 <div id="stats"></div>
 <div class="zone" id="prev" onclick="nav(-1)"></div>
 <div class="zone" id="next" onclick="nav(1)"></div>
@@ -82,7 +97,7 @@
 <div id="err">课程内容加载失败，检查网络后刷新</div>
 <script>
 let manifest=null, dayIdx=-1, seq=[], pos=0, touchX=0;
-const img=document.getElementById('page'), quizEl=document.getElementById('quiz');
+const img=document.getElementById('page'), quizEl=document.getElementById('quiz'), extraEl=document.getElementById('extra');
 
 async function boot(){
   try{
@@ -128,11 +143,11 @@ function goToday(){                          // 回到按日期推进的今日�
 async function goDay(i){
   dayIdx=i; document.getElementById('picker').value=i;
   const day=manifest.days[dayIdx];
-  let imgs=[], quizzes=[];
+  let imgs=[], quizzes=[], extras=[];
   try{
     const cfg=await (await fetch('days/'+day.dir+'/quiz.json?'+Date.now())).json();
     if(Array.isArray(cfg)) quizzes=cfg;
-    else { imgs=cfg.images||[]; quizzes=cfg.quizzes||[]; }
+    else { imgs=cfg.images||[]; quizzes=cfg.quizzes||[]; extras=cfg.extras||[]; }
   }catch(e){}
   if(!imgs.length) for(let p=1;p<=day.pages;p++) imgs.push('page-'+String(p).padStart(2,'0')+'.png');
   seq=imgs.map(s=>({type:'img',src:'days/'+day.dir+'/'+s}));
@@ -140,13 +155,15 @@ async function goDay(i){
   quizzes.sort((a,b)=>a.after-b.after);
   let off=0;
   quizzes.forEach(q=>seq.splice(Math.min(q.after+off++,seq.length),0,{type:'quiz',...q}));
+  // Wiki 拓展：作为最后一屏
+  if(extras && extras.length) seq.push({type:'extra', items:extras});
   pos=0; render();
   // 后台预加载当天全部图片，翻页时直接从缓存出图
   seq.forEach(it=>{ if(it.type==='img'){ const im=new Image(); im.src=it.src; } });
 }
 
 function nav(d){
-  if(document.getElementById('quiz').style.display==='flex') return; // 答题页禁止翻页
+  if(document.getElementById('quiz').style.display==='flex'||document.getElementById('extra').style.display==='flex') return; // 答题/拓展页禁止翻页
   pos=Math.min(Math.max(pos+d,0),seq.length-1);
   render();
 }
@@ -157,17 +174,36 @@ function render(){
   const tag=(dayIdx===expectedDay()-1)?'<span class="today-tag">今日 · Day '+day.day+'</span> ':'';
   document.getElementById('ind').innerHTML=tag+(pos+1)+' / '+seq.length;
   if(item.type==='img'){
-    quizEl.style.display='none'; img.style.display='block';
+    quizEl.style.display='none'; extraEl.style.display='none'; img.style.display='block';
     if(img.getAttribute('src')!==item.src){
       img.classList.add('loading');
       img.onload=()=>img.classList.remove('loading');
       img.onerror=()=>img.classList.remove('loading');
       img.src=item.src;
     }
+  }else if(item.type==='extra'){
+    img.style.display='none'; quizEl.style.display='none';
+    renderExtra(item);
   }else{
-    img.style.display='none';
+    img.style.display='none'; extraEl.style.display='none';
     renderQuiz(item);
   }
+}
+
+function closeExtra(){ extraEl.style.display='none'; document.body.classList.remove('showing-extra'); nav(1); }
+
+function renderExtra(item){
+  document.body.classList.add('showing-extra');
+  extraEl.style.display='flex';
+  extraEl.innerHTML=
+    '<div class="xtag">📎 拓展 · LLM-WIKI</div>'+
+    '<div class="xtitle">想深入再看的关联概念</div>'+
+    '<p class="xsub">卡片只讲了一个点；下面是你在 Wiki 里消化过、和今天相关但没展开的内容。点「去读」跳到 Obsidian 原文。</p>'+
+    item.items.map(x=>'<div class="xcard">'+
+      '<div class="xcard-head"><span class="xcard-name">'+x.name+'</span>'+
+      '<a class="xcard-link" href="'+x.link+'">去读 ↗</a></div>'+
+      '<div class="xcard-desc">'+x.desc+'</div></div>').join('')+
+    '<button class="vbtn" onclick="closeExtra()">继续 →</button>';
 }
 
 function renderQuiz(item){
@@ -280,33 +316,5 @@ document.addEventListener('touchend',e=>{
 },{passive:true});
 boot();
 </script>
-<script>
-try{ localStorage.setItem('agent-pin','5'); }catch(e){}
-setTimeout(function(){
-  setTimeout(function(){
-    document.body.setAttribute('data-test', document.getElementById('dtitle').textContent);
-  }, 2000);
-}, 800);
-</script><script>
-setTimeout(function(){
-  setTimeout(function(){
-    document.body.setAttribute('data-test', JSON.stringify({
-      title: document.getElementById('dtitle').textContent,
-      ind: document.getElementById('ind').innerHTML,
-      hasPrevBtn: !!document.getElementById('prevBtn'),
-      hasNextBtn: !!document.getElementById('nextBtn')
-    }));
-  }, 2000);
-}, 800);
-</script><script>
-setTimeout(function(){
-  setTimeout(function(){
-    var pin = null; try{ pin = localStorage.getItem('agent-pin'); }catch(e){}
-    document.body.setAttribute('data-test', JSON.stringify({
-      pin: pin,
-      title: document.getElementById('dtitle').textContent
-    }));
-  }, 1500);
-}, 600);
-</script></body>
+</body>
 </html>

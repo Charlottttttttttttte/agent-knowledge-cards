@@ -33,5 +33,17 @@
    "answer": 1,
    "explain": "身份和权限不能让攻击不发生，但能把损失圈在权限范围内——爆炸半径变小，损失可控。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Agent行为策略",
+   "desc": "通过人设、铁律与激励话术改变 Agent 行为——身份之外的「软约束」。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent行为策略"
+  },
+  {
+   "name": "大模型安全",
+   "desc": "从攻击视角理解大模型安全——身份与信任边界是安全的第一环。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F大模型安全"
+  }
  ]
 }

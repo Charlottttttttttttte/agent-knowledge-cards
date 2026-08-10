@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "三个字母的来历：检索→增强→生成——资料里有的才说，没有的不硬编。"
   }
+ ],
+ "extras": [
+  {
+   "name": "LLM-Wiki",
+   "desc": "Karpathy 的知识库方法：raw 存原文、wiki 存整理、AGENTS.md 写规则——RAG 的「预消化」替代方案。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FLLM-Wiki"
+  },
+  {
+   "name": "Compiled-Truth",
+   "desc": "与证据链分离的「当前最靠谱结论层」——让 Agent 给结论时可溯源、可修正。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FCompiled-Truth"
+  },
+  {
+   "name": "知识蒸馏",
+   "desc": "小模型学大模型的输出与推理——另一种把知识压进模型的方式，与 RAG 互补。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F知识蒸馏"
+  }
  ]
 }

@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "Agent Gym 是不在生产执行路径上的离线“健身房”，让 Agent 在仿真环境里反复试错、用合成数据压测。"
   }
+ ],
+ "extras": [
+  {
+   "name": "AI自进化",
+   "desc": "AI Agent 通过自动实验循环不断改进自身能力——学习进化的核心机制。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAI自进化"
+  },
+  {
+   "name": "锯齿状智能",
+   "desc": "Karpathy：AI 能力按任务离散分布、好坏落差明显——进化要填平的沟壑。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F锯齿状智能"
+  },
+  {
+   "name": "迭代式AI使用",
+   "desc": "让 AI 分步产出、反复修改而非一次输出——人在环里的进化。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F迭代式AI使用"
+  }
  ]
 }

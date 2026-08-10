@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "Agent 三要素：目标、工具、循环。插件只补了“工具”一条，没有循环和目标，顶多算“长了手的聊天机器人”。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Agent-Loop",
+   "desc": "所有 Agent 共享的「调用模型→执行工具→回传结果」循环——消息数组越滚越长，生产级还要叠策略/权限/生命周期层。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Loop"
+  },
+  {
+   "name": "ReAct循环",
+   "desc": "思考→行动→观察 的迭代决策机制：先想再做、看了结果再想，是 Agent 循环的另一种具体化。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FReAct循环"
+  },
+  {
+   "name": "Goal-Definition-for-Agents",
+   "desc": "把模糊需求转成 Agent 能独立执行、可验收的清晰目标——目标不清，循环转得再久也没方向。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FGoal-Definition-for-Agents"
+  }
  ]
 }

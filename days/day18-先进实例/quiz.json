@@ -33,5 +33,22 @@
    "answer": 0,
    "explain": "AlphaEvolve 把代码生成和自动评测接起来：生成候选代码→评测器打分→优秀方案启发下一代，循环迭代。"
   }
+ ],
+ "extras": [
+  {
+   "name": "AutoResearch",
+   "desc": "自动化实验循环：AI 自动迭代训练模型、优化代码、改进系统——Co-Scientist 同款机制。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAutoResearch"
+  },
+  {
+   "name": "Agent-Builder",
+   "desc": "可视化节点编排构建 Agent 的低代码平台——把先进实例变成日常工具。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Builder"
+  },
+  {
+   "name": "Digital-Twin",
+   "desc": "对实体/流程/个人的数字高保真映射——Agent 实例的另一大应用方向。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FDigital-Twin"
+  }
  ]
 }

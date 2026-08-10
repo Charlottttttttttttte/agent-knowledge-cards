@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "业务指标（收入、转化、留存）最重要：超越技术正确性、衡量真实世界影响；技术指标要从业务目标倒推拆分。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Model-Evaluation",
+   "desc": "用量化指标把「好不好」变成「多少分」——评测 Agent 的通用方法论。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FModel-Evaluation"
+  },
+  {
+   "name": "可观测性",
+   "desc": "用 telemetry 数据理解系统内部状态——跑生产 Agent 必须有的眼睛。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F可观测性"
+  },
+  {
+   "name": "SRE",
+   "desc": "用软件工程方法解决运维问题——把 Agent 当服务来运营的理念来源。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FSRE"
+  }
  ]
 }

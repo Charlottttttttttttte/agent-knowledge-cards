@@ -33,5 +33,22 @@
    "answer": 0,
    "explain": "推理防御用 AI 防 AI：对抗训练拿攻击样本“捶打”模型，守护模型在计划执行前审查、标出风险步骤。"
   }
+ ],
+ "extras": [
+  {
+   "name": "大模型安全",
+   "desc": "从攻击视角理解大模型安全——先学会攻击，才能更好地防御。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F大模型安全"
+  },
+  {
+   "name": "Web安全漏洞",
+   "desc": "XSS、SQL 注入、CSRF 等 Web 常见缺陷——提示注入之外的同类威胁模型。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FWeb安全漏洞"
+  },
+  {
+   "name": "负面约束",
+   "desc": "在 prompt 里明确禁止行为、划定边界——一种轻量的防御手法。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F负面约束"
+  }
  ]
 }

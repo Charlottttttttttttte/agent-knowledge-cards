@@ -33,5 +33,22 @@
    "answer": 0,
    "explain": "记住金句：MCP 连工具，A2A 连 Agent——一个管\"长手\"，一个管\"交朋友\"。"
   }
+ ],
+ "extras": [
+  {
+   "name": "多Agent协作网络",
+   "desc": "异构 Agent 像加入组织网络一样注册身份、发现能力、动态协作——A2A 的网络形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F多Agent协作网络"
+  },
+  {
+   "name": "Agent-Team",
+   "desc": "leader + worker 的协作架构——A2A 之内的常见组织方式。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Team"
+  },
+  {
+   "name": "Agent-Orchestration",
+   "desc": "分工、调度与 token 预算——A2A 互连之上的编排问题。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Orchestration"
+  }
  ]
 }

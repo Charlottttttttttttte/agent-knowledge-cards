@@ -33,5 +33,22 @@
    "answer": 1,
    "explain": "网关干两件事：运行时策略执行（认证、授权、统一日志观测）+ 集中治理（中央注册中心统一管理）。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Agent行为策略",
+   "desc": "人设/铁律/激励话术塑造 Agent 行为——治理网关的「软」一层。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent行为策略"
+  },
+  {
+   "name": "可观测性",
+   "desc": "telemetry 看清每个 Agent 在干什么——治理的前提是看得见。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F可观测性"
+  },
+  {
+   "name": "Long-Running-Task-Execution",
+   "desc": "多会话循环持续完成长任务——治理要管的正是这种长跑 Agent。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FLong-Running-Task-Execution"
+  }
  ]
 }

@@ -33,5 +33,22 @@
    "answer": 2,
    "explain": "Level 3 协作多 Agent 系统：一个项目经理带一群专家，把别的 Agent 当工具使，像一家公司。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Agent杠杆率",
+   "desc": "以「能调度多少 Agent、消耗多少 Token」衡量产出的新范式——分级越高，杠杆越大。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent杠杆率"
+  },
+  {
+   "name": "Goal-Definition-for-Agents",
+   "desc": "把模糊目标翻译成可验收任务的「目标定义」——Level 越高，对目标清晰度要求越高。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FGoal-Definition-for-Agents"
+  },
+  {
+   "name": "subagent",
+   "desc": "把复杂任务拆成多个独立子任务、并行处理的模式——高级 Agent 的常见形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fsubagent"
+  }
  ]
 }

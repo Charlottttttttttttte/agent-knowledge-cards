@@ -33,5 +33,27 @@
    "answer": 0,
    "explain": "白板画完就擦＝短期记忆，档案柜存着过往＝长期记忆：短期记当下，长期存历史，跨会话仍在。"
   }
+ ],
+ "extras": [
+  {
+   "name": "Four-Layer-Memory",
+   "desc": "个人 OS 记忆系统四层架构（core/memo/daily…）——短期/长期之外的分层方案。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FFour-Layer-Memory"
+  },
+  {
+   "name": "Thought-Memory",
+   "desc": "把推理提炼成可复用的「想法」存下来，下次检索 thought——「别只检索数据，去检索思考」。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FThought-Memory"
+  },
+  {
+   "name": "换窗失忆",
+   "desc": "新窗口丢失历史上下文的「失忆」现象——长期记忆要解决的正是它。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F换窗失忆"
+  },
+  {
+   "name": "记忆分层",
+   "desc": "按生命周期/用途/访问频率分层存储记忆——记忆管理的方法论。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F记忆分层"
+  }
  ]
 }

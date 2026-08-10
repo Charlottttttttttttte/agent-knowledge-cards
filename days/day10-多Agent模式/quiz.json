@@ -33,5 +33,22 @@
    "answer": 2,
    "explain": "迭代精炼靠生成器+评论家循环提质量；HITL 是插在任何流程里的安全闸门，不只在顺序流水线里能用。"
   }
+ ],
+ "extras": [
+  {
+   "name": "subagent",
+   "desc": "主 Agent 把任务拆给多个子 Agent 并行——多 Agent 模式的基础单元。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fsubagent"
+  },
+  {
+   "name": "Agent-Team",
+   "desc": "leader + worker 的协作架构——最常见的团队组织方式。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Team"
+  },
+  {
+   "name": "Kimi-Code-Swarm",
+   "desc": "主 Agent 派发多个子 Agent 并行处理任务的 Swarm 模式——日常可用的实战形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FKimi-Code-Swarm"
+  }
  ]
 }
