@@ -38,7 +38,7 @@
     },
     {
       "day": 7,
-      "title": "RAG：先查资料再回答",
+      "title": "RAG",
       "dir": "day07-RAG检索增强",
       "pages": 7
     },
@@ -62,7 +62,7 @@
     },
     {
       "day": 11,
-      "title": "Agent Ops：怎么评测 Agent",
+      "title": "Agent Ops",
       "dir": "day11-AgentOps评测",
       "pages": 7
     },
@@ -74,7 +74,7 @@
     },
     {
       "day": 13,
-      "title": "A2A：Agent 与 Agent 互联",
+      "title": "A2A",
       "dir": "day13-A2A互联",
       "pages": 7
     },
@@ -104,8 +104,68 @@
     },
     {
       "day": 18,
-      "title": "实例：Co-Scientist / AlphaEvolve",
+      "title": "实例",
       "dir": "day18-先进实例",
+      "pages": 7
+    },
+    {
+      "day": 19,
+      "title": "Agent Skills",
+      "dir": "day19-Agent Skills",
+      "pages": 7
+    },
+    {
+      "day": 20,
+      "title": "Tool-Use 深入",
+      "dir": "day20-Tool-Use 深入",
+      "pages": 7
+    },
+    {
+      "day": 21,
+      "title": "子代理 Subagent",
+      "dir": "day21-子代理 Subagent",
+      "pages": 7
+    },
+    {
+      "day": 22,
+      "title": "长期记忆方案",
+      "dir": "day22-长期记忆方案",
+      "pages": 7
+    },
+    {
+      "day": 23,
+      "title": "Prompt 工程",
+      "dir": "day23-Prompt 工程",
+      "pages": 7
+    },
+    {
+      "day": 24,
+      "title": "Meta-Prompt",
+      "dir": "day24-Meta-Prompt",
+      "pages": 7
+    },
+    {
+      "day": 25,
+      "title": "Agent 部署",
+      "dir": "day25-Agent 部署",
+      "pages": 7
+    },
+    {
+      "day": 26,
+      "title": "记忆分层",
+      "dir": "day26-记忆分层",
+      "pages": 7
+    },
+    {
+      "day": 27,
+      "title": "Skill 系统",
+      "dir": "day27-Skill 系统",
+      "pages": 7
+    },
+    {
+      "day": 28,
+      "title": "多 Agent 架构",
+      "dir": "day28-多 Agent 架构",
       "pages": 7
     }
   ]

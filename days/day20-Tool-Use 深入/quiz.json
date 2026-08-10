@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "Tool-Use 的定义是？",
+   "options": [
+    "A. 模型在生成回复过程中，按任务需求调用外部工具扩展能力",
+    "B. 模型在训练时把工具文档背进参数里",
+    "C. 用户手动替模型执行命令",
+    "D. 模型生成更长回复的能力"
+   ],
+   "answer": 0,
+   "explain": "原文定义：模型在生成回复过程中，根据任务需求调用外部工具（API、数据库、代码解释器等）以扩展自身能力。重点是「生成过程中」和「调用外部工具」。"
+  },
+  {
+   "after": 6,
+   "q": "下列哪项不属于原文列出的工具用途？",
+   "options": [
+    "A. 获取实时信息",
+    "B. 执行精确计算",
+    "C. 调用外部系统服务",
+    "D. 重新训练模型自身参数"
+   ],
+   "answer": 3,
+   "explain": "原文列的三类是：获取实时信息、执行精确计算、调用外部系统服务。工具调用发生在推理时，不会改动模型本身的参数权重。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "Function-Calling",
+   "desc": "Tool-Use 最常见的技术实现：模型按约定格式输出结构化调用请求，再由程序真正执行工具。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FFunction-Calling"
+  },
+  {
+   "name": "Agent",
+   "desc": "Agent 之所以是 Agent，核心地基正是 Tool-Use——能感知、能调工具、能在世界里行动。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent"
+  },
+  {
+   "name": "MCP",
+   "desc": "给模型接工具的标准化协议：工具怎么被发现、怎么被调用，由 MCP 统一规范。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FMCP"
+  }
+ ]
+}

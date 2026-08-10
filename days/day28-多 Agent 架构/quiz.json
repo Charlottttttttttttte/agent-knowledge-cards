@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "按本期定义，AI Agent 架构的核心是什么？",
+   "options": [
+    "A. 把大语言模型作为核心推理引擎，组合规划、记忆、工具、反馈模块",
+    "B. 用更强的模型替换旧模型",
+    "C. 写更长的系统提示词",
+    "D. 堆更多 GPU 算力"
+   ],
+   "answer": 0,
+   "explain": "原文定义：Agent 架构是把 LLM 作为核心推理引擎，通过规划、记忆、工具调用与执行反馈等模块有机组合，使系统自主完成复杂任务的工程结构——重点在「组合」而非单点增强。"
+  },
+  {
+   "after": 6,
+   "q": "清晰的 Agent 架构最直接决定哪项能力？",
+   "options": [
+    "A. 模型的参数规模",
+    "B. 单次回答的文采",
+    "C. 长周期任务中的目标一致、上下文完整与错误恢复",
+    "D. 训练数据的清洗质量"
+   ],
+   "answer": 2,
+   "explain": "素材「为什么重要」一节明确指出：架构决定系统能否在长周期任务中保持目标一致、上下文完整与错误恢复能力，并影响开发成本、可维护性与用户体验。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "Agent-Team",
+   "desc": "多 Agent 组队的具体形态：角色分工与协作拓扑——本期「生产级组队」的展开篇。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Team"
+  },
+  {
+   "name": "多Agent协作",
+   "desc": "多个 Agent 如何通信、分工与汇合——架构从单机走向协作网络的关键一环。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F%E5%A4%9AAgent%E5%8D%8F%E4%BD%9C"
+  },
+  {
+   "name": "AI-Agent-Memory",
+   "desc": "架构四大模块里的「记忆」单独成篇：长周期任务保持上下文完整靠的就是它。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAI-Agent-Memory"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "想让模型完成一个它没见过的任务，最合适的技法是？",
+   "options": [
+    "A. 给几个示例让它学习模式（Few-Shot）",
+    "B. 把 Temperature 调到 1.0",
+    "C. 什么都不说，等它猜",
+    "D. 重复同一个问题十次"
+   ],
+   "answer": 0,
+   "explain": "Few-Shot 通过提供几个输入输出示例让模型学习任务模式，比 Zero-Shot 更适合有特定格式或风格要求的任务。调温度只影响随机性，不解决「没见过」的问题。"
+  },
+  {
+   "after": 6,
+   "q": "提示工程的黄金法则是什么？",
+   "options": [
+    "A. 提示越长越详细越好",
+    "B. 告诉 AI 要做什么，而不是不要做什么",
+    "C. 所有任务都要用思维链",
+    "D. 永远不要给模型设定角色"
+   ],
+   "answer": 1,
+   "explain": "原文黄金法则：「Say what TO DO, not what NOT to do」——正面指令更有效，因为模型按字面模式生成，「不要做X」反而把 X 放进了它的注意力里。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "chain-of-thought",
+   "desc": "思维链推理：引导模型一步步思考再作答，复杂推理任务的准确率利器——本期 CoT 技法的完整展开。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fchain-of-thought"
+  },
+  {
+   "name": "rag",
+   "desc": "检索增强生成：先检索外部知识库再生成回答，解决模型知识过期问题——问答系统场景的标配技术。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Frag"
+  },
+  {
+   "name": "vibe-coding",
+   "desc": "应用 Prompt 技术的编程方式：用自然语言描述需求让 AI 写代码，提示工程在编程场景的实战形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fvibe-coding"
+  }
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "在 Claude Code 里安装一个 skill 的正确姿势是？",
+   "options": [
+    "A. 在配置文件里手动注册每个字段",
+    "B. 下载后放进 ~/.claude/skills/，重启生效",
+    "C. 每次对话开头把 skill 全文贴一遍",
+    "D. 必须联网实时调用远程技能服务"
+   ],
+   "answer": 1,
+   "explain": "素材给出的使用方式就是三步：下载 skill → 放入 ~/.claude/skills/ 目录 → 重启 Claude Code，启动时自动加载，无需手动注册或反复粘贴。"
+  },
+  {
+   "after": 6,
+   "q": "「保存文件时自动运行测试」属于技能生态里的哪一类？",
+   "options": [
+    "A. Skills（技能包）",
+    "B. Hooks（自动触发器）",
+    "C. Slash Commands（斜杠命令）",
+    "D. Plugins（插件扩展）"
+   ],
+   "answer": 1,
+   "explain": "Hooks 是自动化触发器，负责「保存时自动格式化、提交前自动检查」这类事件驱动动作；输入 /test 手动触发的才是斜杠命令，别搞混。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "Slash-Commands",
+   "desc": "斜杠命令：输入 /test 就跑测试套件——和 Skills 同属技能生态，一个是知识包、一个是快捷键。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FSlash-Commands"
+  },
+  {
+   "name": "Agent-Orchestration",
+   "desc": "Agent 编排：让多个 Claude Code 实例协作——资源库六类资源之一，技能系统的进阶玩法。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Orchestration"
+  },
+  {
+   "name": "Claude-Code-Skill",
+   "desc": "为 Claude Code 编写的专项能力扩展，通常以 SKILL.md 定义工作流与规则——本期体系的具体落地形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FClaude-Code-Skill"
+  }
+ ]
+}

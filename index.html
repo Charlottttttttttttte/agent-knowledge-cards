@@ -128,6 +128,14 @@ function loadPin(){
   try{ const v=localStorage.getItem('agent-pin'); return v?parseInt(v,10):0; }catch(e){ return 0; }
 }
 function resolveStartDay(){
+  // ?day=N 深链优先（如 personal-site 今日页跳转），N 为 1-based
+  try{
+    const m=location.search.match(/[?&]day=(\d+)/);
+    if(m){
+      const n=+m[1];
+      if(n>=1 && n<=manifest.days.length) return n-1;
+    }
+  }catch(e){}
   const pin=loadPin();
   return pin ? pin-1 : expectedDay()-1;     // 手动固定优先，否则按日期推进
 }

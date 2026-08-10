@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "子代理模式相比单代理，核心优势不包括哪一项？",
+   "options": [
+    "A. 并行处理加速",
+    "B. 每个子任务独立上下文",
+    "C. 部分失败可单独重试",
+    "D. 单代理能记住更多全局细节"
+   ],
+   "answer": 3,
+   "explain": "恰恰相反：单代理的痛点就是上下文容易溢出。子代理的四大优势是并行加速、独立上下文、部分失败可重试、每个子代理可专业化。"
+  },
+  {
+   "after": 6,
+   "q": "规划-执行-审查模式里，Reviewer 的职责是？",
+   "options": [
+    "A. 拆解任务",
+    "B. 并行执行子任务",
+    "C. 整合并审查各 Worker 的结果",
+    "D. 创建并销毁子代理"
+   ],
+   "answer": 2,
+   "explain": "Planner 负责拆解任务，Worker 并行执行，Reviewer 在最后一步统一整合和审查结果——这是该模式的收口环节。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "multi-agent",
+   "desc": "多代理系统：与临时创建、用完即毁的子代理不同，Multi-Agent 长期存在、持续协作，需要更复杂的协调机制。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fmulti-agent"
+  },
+  {
+   "name": "agent-orchestration",
+   "desc": "代理编排：怎么给一群 Agent 拆任务、派活、收口——子代理模式背后的调度学问。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fagent-orchestration"
+  },
+  {
+   "name": "Plan-Execute-Review",
+   "desc": "执行与评审分离的三层架构——本期「规划-执行-审查」模式的完整展开版。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FPlan-Execute-Review"
+  }
+ ]
+}

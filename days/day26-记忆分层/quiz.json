@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "记忆分层是按哪三个维度来划分存储层的？",
+   "options": [
+    "A. 生命周期、用途、访问频率",
+    "B. 文件大小、格式、创建时间",
+    "C. 模型大小、token 数、成本",
+    "D. 用户、项目、设备"
+   ],
+   "answer": 0,
+   "explain": "记忆分层的定义就是按生命周期、用途和访问频率把记忆划分为 core / memo / daily 等不同存储层——活得久不久、干什么用、多久读一次，决定了它该住哪一层。"
+  },
+  {
+   "after": 6,
+   "q": "新对话窗口里让 AI 快速恢复上下文，哪种做法最符合分层思路？",
+   "options": [
+    "A. 把所有记忆文件全部读一遍",
+    "B. 什么都不读，让用户重新自我介绍",
+    "C. 一条 briefing API 聚合返回 core+memo+近日 daily",
+    "D. 只读当前会话的聊天记录"
+   ],
+   "answer": 2,
+   "explain": "分层后各层职责清晰，一条 briefing API 一次拉回核心记忆、备忘和近况日志，四步变一步——既精准又省 token；暴力读取所有文件既慢又浪费，正是分层要避免的。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "Thought-Memory",
+   "desc": "Thought-Retriever 每次回答后顺手沉淀 thought，记忆会自发形成分层语义结构——和 core/memo/daily 的人工分层互为印证。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FThought-Memory"
+  },
+  {
+   "name": "AI-Agent-Memory",
+   "desc": "记忆分层是 Agent 跨会话不失忆的组织手段：分层决定存哪，Agent Memory 解决为什么存。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAI-Agent-Memory"
+  },
+  {
+   "name": "第二大脑",
+   "desc": "分层记忆让 AI 知识库像人脑一样有工作区和归档柜，是把收藏变成第二大脑的关键一步。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F%E7%AC%AC%E4%BA%8C%E5%A4%A7%E8%84%91"
+  }
+ ]
+}

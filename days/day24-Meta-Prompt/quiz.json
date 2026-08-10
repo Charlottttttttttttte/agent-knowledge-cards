@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "元提示词（Meta-Prompt）的核心是？",
+   "options": [
+    "A. 让 AI 反向生成/优化提示词",
+    "B. 给 AI 设定一个人格角色",
+    "C. 把提示词写得越长越好",
+    "D. 背诵专业设计词汇再提问"
+   ],
+   "answer": 0,
+   "explain": "元提示词就是「让 AI 帮你写提示词」——反向生成或优化提示词，特别适合不懂专业设计词汇的用户。"
+  },
+  {
+   "after": 6,
+   "q": "元提示词最适合哪类人？",
+   "options": [
+    "A. 提示词工程专家",
+    "B. 不懂专业设计词汇、只会说人话描述需求的用户",
+    "C. 只写代码不用 AI 的人",
+    "D. 已经有完美提示词库的人"
+   ],
+   "answer": 1,
+   "explain": "wiki 原文点明：这招适合「不懂专业设计词汇」的用户——说人话，让 AI 补专业表达，门槛大幅降低。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "prompt-engineering",
+   "desc": "提示词工程的系统方法——元提示词是其中「让 AI 自己上手」的那一支捷径。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fprompt-engineering"
+  },
+  {
+   "name": "skill-creator",
+   "desc": "Claude 官方「用 AI 写 Skill」的技能——元提示词在 Agent 工具链里的落地形态。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fskill-creator"
+  },
+  {
+   "name": "Context-Engineering",
+   "desc": "比提示词更上游的功夫：管好 AI 看到的全部上下文——提示词只是其中一环。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FContext-Engineering"
+  }
+ ]
+}

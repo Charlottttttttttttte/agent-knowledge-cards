@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "AI Agent 部署的核心目标是？",
+   "options": [
+    "A. 让 Agent 从开发环境迁移到生产环境，稳定可扩展地对外服务",
+    "B. 给 Agent 换一个更大的模型",
+    "C. 把 Agent 的代码写得更优雅",
+    "D. 让 Agent 在本地跑得更快"
+   ],
+   "answer": 0,
+   "explain": "原文定义：部署就是把基于大模型的 Agent 从开发环境迁移到生产环境，并使其稳定、可扩展地对外提供服务。"
+  },
+  {
+   "after": 6,
+   "q": "部署阶段需要关注的关键工程问题不包括？",
+   "options": [
+    "A. 延迟",
+    "B. 成本",
+    "C. 提示词写得好不好",
+    "D. 可观测性"
+   ],
+   "answer": 2,
+   "explain": "原文点名的关键工程问题是延迟、成本、安全、可观测性；提示词质量属于开发阶段的事，不是部署阶段的核心工程问题。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "可观测性",
+   "desc": "部署后的持续保障：如何监控 Agent 运行状态、追踪问题——本期只点了一句，这里展开讲。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F可观测性"
+  },
+  {
+   "name": "端到端AI应用开发",
+   "desc": "从原型到上线的完整链路视角：部署只是其中一环，这页讲全流程。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F端到端AI应用开发"
+  },
+  {
+   "name": "Agent-Team",
+   "desc": "多 Agent 协作架构——部署到生产后，团队式 Agent 的稳定性挑战更大。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FAgent-Team"
+  }
+ ]
+}

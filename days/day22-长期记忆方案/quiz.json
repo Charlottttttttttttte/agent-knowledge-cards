@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "Claude-Mem 实现跨会话记忆的核心流程是？",
+   "options": [
+    "A. 自动记录会话 → AI 压缩存储 → 下次启动回注上下文",
+    "B. 手动复制聊天记录 → 粘贴进新会话",
+    "C. 扩大模型上下文窗口 → 永不关闭会话",
+    "D. 微调模型 → 把记忆写进权重"
+   ],
+   "answer": 0,
+   "explain": "Claude-Mem 是自动记录所有编码会话，用 AI 压缩存储，下次启动时把上下文精准「喂」回 Claude，实现跨会话无缝衔接——靠的是外部记忆机制，不是人肉搬运或改模型。"
+  },
+  {
+   "after": 6,
+   "q": "记忆系统「四层架构」的正确顺序是？",
+   "options": [
+    "A. 每周整理 → 每日同步 → 每小时微同步 → 实时会话",
+    "B. 实时会话 → 每日同步 → 每周整理 → 每小时微同步",
+    "C. 实时会话 → 每小时微同步 → 每日上下文同步 → 每周深度整理",
+    "D. 每小时微同步 → 实时会话 → 每周整理 → 每日同步"
+   ],
+   "answer": 2,
+   "explain": "四层从短到长逐级沉淀：Layer 1 实时会话（当前对话）→ Layer 2 每小时微同步（短时记忆刷新）→ Layer 3 每日同步（MEMORY.md 更新）→ Layer 4 每周深度整理（精华沉淀+偏好提取）。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "memory-system",
+   "desc": "记忆系统的完整四层架构与「Memory Infrastructure > Agent Intelligence」理念——长期记忆的系统化落地版。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2Fmemory-system"
+  },
+  {
+   "name": "Context-Management",
+   "desc": "上下文管理：定期整理、版本同步、压缩记忆——长期记忆「压缩回注」背后的通用方法论。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FContext-Management"
+  },
+  {
+   "name": "第二大脑",
+   "desc": "把知识沉淀为与 Agent 解耦的数据层，任何 Agent 即插即用——长期记忆的最终归宿是数据层归你所有。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2F%E7%AC%AC%E4%BA%8C%E5%A4%A7%E8%84%91"
+  }
+ ]
+}

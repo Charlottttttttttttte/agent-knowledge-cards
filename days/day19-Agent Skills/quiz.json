@@ -1,0 +1,54 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "关于 Skills 与 MCP 的关系，正确的是？",
+   "options": [
+    "A. Skills 是基础设施，MCP 是能力层",
+    "B. MCP 决定能不能做，Skills 决定做得好不好",
+    "C. 两者功能一样，可以互相替代",
+    "D. 必须先装 Skills，再装 MCP"
+   ],
+   "answer": 1,
+   "explain": "原文明确：MCP 等基础设施决定 AI 能不能做，Skills 是个性化能力层，决定做得好不好——先装基建再叠 Skills。"
+  },
+  {
+   "after": 6,
+   "q": "判断一个 Skill 有没有用，正确的做法是？",
+   "options": [
+    "A. 看文档写得详不详细",
+    "B. 看作者名气大不大",
+    "C. 装上和没装跑 A/B 测试，看量化数据",
+    "D. 凭感觉，感觉流畅就保留"
+   ],
+   "answer": 2,
+   "explain": "原文强调 Skill 的效果可以用 A/B 测试量化验证，拒绝「感觉有用」——用数据而不是主观感受来评估。"
+  }
+ ],
+ "extras": [
+  {
+   "name": "MCP",
+   "desc": "基础设施层协议，负责打通工具与数据——与 Skills 的能力分层正好互补。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FMCP"
+  },
+  {
+   "name": "Context-Engineering",
+   "desc": "Skill 是上下文工程的产品化形态：把精心设计的上下文沉淀成可加载的文件。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FContext-Engineering"
+  },
+  {
+   "name": "Skill-Vetter",
+   "desc": "Skill 安装前的安全扫描制度——能力可分发，也意味着风险可分发。",
+   "link": "obsidian://open?vault=Charlotte&file=LLM-Wiki%2Fwiki%2Fconcepts%2FSkill-Vetter"
+  }
+ ]
+}
