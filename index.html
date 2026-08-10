@@ -19,6 +19,14 @@
   #page{max-width:100vw;max-height:100vh;object-fit:contain;user-select:none;-webkit-user-drag:none;transition:opacity .18s;}
   #page.loading{opacity:.35;}
   .zone{position:fixed;top:0;bottom:0;width:30%;z-index:10;}
+  .navbtn{position:fixed;top:50%;transform:translateY(-50%);z-index:25;width:52px;height:52px;border-radius:50%;
+    border:2px solid rgba(248,241,220,.7);background:rgba(74,63,48,.55);color:#F8F1DC;font-size:24px;line-height:1;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;
+    box-shadow:0 2px 8px rgba(0,0,0,.25);touch-action:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+  .navbtn:active{background:rgba(74,63,48,.85);}
+  #prevBtn{left:12px;} #nextBtn{right:12px;}
+  .today-tag{display:inline-block;font-size:13px;color:var(--accent);background:rgba(255,255,255,.6);
+    border:1px dashed var(--accent);border-radius:10px;padding:2px 8px;margin-left:8px;}
   #prev{left:0;} #next{right:0;}
   #ind{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 12px);left:0;right:0;text-align:center;
     font-size:13px;color:var(--gray);z-index:20;letter-spacing:1px;}
@@ -58,8 +66,9 @@
 <header>
   <span class="title" id="dtitle">Agent AI 学习课程</span>
   <span>
+    <button class="hbtn" id="todayBtn" onclick="goToday()">今日</button>
     <button class="hbtn" onclick="showStats()">成绩</button>
-    <select id="picker" onchange="goDay(+this.value)"></select>
+    <select id="picker" onchange="pinDay(+this.value)"></select>
   </span>
 </header>
 <div id="stage"><img id="page" alt=""></div>
@@ -67,6 +76,8 @@
 <div id="stats"></div>
 <div class="zone" id="prev" onclick="nav(-1)"></div>
 <div class="zone" id="next" onclick="nav(1)"></div>
+<button class="navbtn" id="prevBtn" onclick="nav(-1)" aria-label="上一页">‹</button>
+<button class="navbtn" id="nextBtn" onclick="nav(1)" aria-label="下一页">›</button>
 <div id="ind"></div>
 <div id="err">课程内容加载失败，检查网络后刷新</div>
 <script>
@@ -83,8 +94,35 @@ async function boot(){
       o.value=i; o.textContent='Day '+d.day+' · '+d.title;
       sel.appendChild(o);
     });
-    goDay(manifest.days.length-1);
+    goDay(resolveStartDay());
   }catch(e){ document.getElementById('err').style.display='flex'; }
+}
+
+/* ===== 今日进度 / 手动固定 ===== */
+function courseStart(){
+  try{ const s=localStorage.getItem('agent-start'); if(s) return new Date(s); }catch(e){}
+  return new Date('2026-08-10T00:00:00');   // 课程开课日（默认 2026-08-10，可改 localStorage agent-start）
+}
+function expectedDay(){
+  const start=courseStart();
+  const today=new Date(); today.setHours(0,0,0,0);
+  const elapsed=Math.floor((today-start)/86400000)+1;
+  return Math.max(1, Math.min(manifest.days.length, elapsed));
+}
+function loadPin(){
+  try{ const v=localStorage.getItem('agent-pin'); return v?parseInt(v,10):0; }catch(e){ return 0; }
+}
+function resolveStartDay(){
+  const pin=loadPin();
+  return pin ? pin-1 : expectedDay()-1;     // 手动固定优先，否则按日期推进
+}
+function pinDay(i){                          // 下拉手动选择：固定并记住
+  try{ localStorage.setItem('agent-pin', String(i+1)); }catch(e){}
+  goDay(i);
+}
+function goToday(){                          // 回到按日期推进的今日进度
+  try{ localStorage.removeItem('agent-pin'); }catch(e){}
+  goDay(expectedDay()-1);
 }
 
 async function goDay(i){
@@ -116,7 +154,8 @@ function nav(d){
 function render(){
   const item=seq[pos], day=manifest.days[dayIdx];
   document.getElementById('dtitle').textContent='Day '+day.day+' · '+day.title;
-  document.getElementById('ind').textContent=(pos+1)+' / '+seq.length;
+  const tag=(dayIdx===expectedDay()-1)?'<span class="today-tag">今日 · Day '+day.day+'</span> ':'';
+  document.getElementById('ind').innerHTML=tag+(pos+1)+' / '+seq.length;
   if(item.type==='img'){
     quizEl.style.display='none'; img.style.display='block';
     if(img.getAttribute('src')!==item.src){
@@ -241,5 +280,33 @@ document.addEventListener('touchend',e=>{
 },{passive:true});
 boot();
 </script>
-</body>
+<script>
+try{ localStorage.setItem('agent-pin','5'); }catch(e){}
+setTimeout(function(){
+  setTimeout(function(){
+    document.body.setAttribute('data-test', document.getElementById('dtitle').textContent);
+  }, 2000);
+}, 800);
+</script><script>
+setTimeout(function(){
+  setTimeout(function(){
+    document.body.setAttribute('data-test', JSON.stringify({
+      title: document.getElementById('dtitle').textContent,
+      ind: document.getElementById('ind').innerHTML,
+      hasPrevBtn: !!document.getElementById('prevBtn'),
+      hasNextBtn: !!document.getElementById('nextBtn')
+    }));
+  }, 2000);
+}, 800);
+</script><script>
+setTimeout(function(){
+  setTimeout(function(){
+    var pin = null; try{ pin = localStorage.getItem('agent-pin'); }catch(e){}
+    document.body.setAttribute('data-test', JSON.stringify({
+      pin: pin,
+      title: document.getElementById('dtitle').textContent
+    }));
+  }, 1500);
+}, 600);
+</script></body>
 </html>
