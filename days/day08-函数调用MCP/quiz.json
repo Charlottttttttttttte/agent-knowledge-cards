@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "OpenAPI 规范给工具提供什么？",
+   "options": [
+    "A. 连接密码",
+    "B. 结构化契约（用途、参数、响应）",
+    "C. 运行环境",
+    "D. 收费方案"
+   ],
+   "answer": 1,
+   "explain": "模型不会“点开文档看用法”，OpenAPI 给的是一份机器能读的结构化契约，模型照着它才能每次调得对。"
+  },
+  {
+   "after": 6,
+   "q": "OpenAPI 和 MCP 的关系是？",
+   "options": [
+    "A. 二选一",
+    "B. 完全一样",
+    "C. 上下游配合，MCP 服务器里常包着一个 OpenAPI 定义的 API",
+    "D. 竞争关系"
+   ],
+   "answer": 2,
+   "explain": "OpenAPI 描述“API 长什么样”，MCP 解决“模型怎么连上工具”，两者上下游配合、各司其职。"
+  }
+ ]
+}

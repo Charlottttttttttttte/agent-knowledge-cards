@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "RAG 主要解决什么问题？",
+   "options": [
+    "A. 回答太慢",
+    "B. 幻觉",
+    "C. 成本太高",
+    "D. 格式太乱"
+   ],
+   "answer": 1,
+   "explain": "模型爱“一本正经地编答案”，这就是幻觉（hallucination）。RAG 先查证再开口，把回答钉在事实上。"
+  },
+  {
+   "after": 6,
+   "q": "RAG 的三步流程是？",
+   "options": [
+    "A. 提问→搜索→回答",
+    "B. 检索→增强→生成",
+    "C. 读取→记忆→输出",
+    "D. 查询→汇总→返回"
+   ],
+   "answer": 1,
+   "explain": "三个字母的来历：检索→增强→生成——资料里有的才说，没有的不硬编。"
+  }
+ ]
+}

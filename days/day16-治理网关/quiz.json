@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "“Agent 蔓延”指的是什么？",
+   "options": [
+    "A. Agent 数量变多且交互复杂、失去管控",
+    "B. Agent 感染病毒",
+    "C. Agent 跑得越来越快",
+    "D. 一个 Agent 自我复制"
+   ],
+   "answer": 0,
+   "explain": "Agent 蔓延指 Agent 和工具到处扩散、互相调用，数量变多又失去管控，每个都成了潜在攻击面。"
+  },
+  {
+   "after": 6,
+   "q": "治理网关的两大功能是？",
+   "options": [
+    "A. 训练和推理",
+    "B. 运行时策略执行 + 集中治理",
+    "C. 存储和备份",
+    "D. 加密和压缩"
+   ],
+   "answer": 1,
+   "explain": "网关干两件事：运行时策略执行（认证、授权、统一日志观测）+ 集中治理（中央注册中心统一管理）。"
+  }
+ ]
+}

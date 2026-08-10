@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "Coordinator 协调者模式最适合哪种任务？",
+   "options": [
+    "A. 步骤完全写死的线性流程",
+    "B. 动态、非线性任务（今天不知道明天拆几个子任务、要不要并行）",
+    "C. 只需要一次模型调用的任务",
+    "D. 没有明确目标的任务"
+   ],
+   "answer": 1,
+   "explain": "协调者专治动态、非线性任务：拆几个子任务、要不要并行都由它当场定；写死的线性流程该走 Sequential 流水线。"
+  },
+  {
+   "after": 6,
+   "q": "关于 Iterative Refinement 和 HITL，下列说法正确的是？",
+   "options": [
+    "A. 两者都是\"分工\"模式",
+    "B. HITL 只能用在顺序流水线里",
+    "C. Iterative Refinement 靠生成器+评论家循环提质量；HITL 是插在任何流程里的安全闸门",
+    "D. Iterative Refinement 适合线性固定流程"
+   ],
+   "answer": 2,
+   "explain": "迭代精炼靠生成器+评论家循环提质量；HITL 是插在任何流程里的安全闸门，不只在顺序流水线里能用。"
+  }
+ ]
+}

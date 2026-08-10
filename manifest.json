@@ -1,0 +1,112 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "title": "什么是 AI Agent",
+      "dir": "day01-什么是Agent",
+      "pages": 7
+    },
+    {
+      "day": 2,
+      "title": "Agent 四要素",
+      "dir": "day02-四要素",
+      "pages": 7
+    },
+    {
+      "day": 3,
+      "title": "五步循环 Think–Act–Observe",
+      "dir": "day03-五步循环",
+      "pages": 7
+    },
+    {
+      "day": 4,
+      "title": "Agent 分级 Level 0-4",
+      "dir": "day04-Agent分级",
+      "pages": 7
+    },
+    {
+      "day": 5,
+      "title": "上下文工程",
+      "dir": "day05-上下文工程",
+      "pages": 7
+    },
+    {
+      "day": 6,
+      "title": "模型选型与路由",
+      "dir": "day06-模型选型路由",
+      "pages": 7
+    },
+    {
+      "day": 7,
+      "title": "RAG：先查资料再回答",
+      "dir": "day07-RAG检索增强",
+      "pages": 7
+    },
+    {
+      "day": 8,
+      "title": "函数调用与 MCP",
+      "dir": "day08-函数调用MCP",
+      "pages": 7
+    },
+    {
+      "day": 9,
+      "title": "短期记忆 vs 长期记忆",
+      "dir": "day09-记忆系统",
+      "pages": 7
+    },
+    {
+      "day": 10,
+      "title": "多 Agent 四大设计模式",
+      "dir": "day10-多Agent模式",
+      "pages": 7
+    },
+    {
+      "day": 11,
+      "title": "Agent Ops：怎么评测 Agent",
+      "dir": "day11-AgentOps评测",
+      "pages": 7
+    },
+    {
+      "day": 12,
+      "title": "LM as Judge 大模型当考官",
+      "dir": "day12-LM-as-Judge",
+      "pages": 7
+    },
+    {
+      "day": 13,
+      "title": "A2A：Agent 与 Agent 互联",
+      "dir": "day13-A2A互联",
+      "pages": 7
+    },
+    {
+      "day": 14,
+      "title": "提示注入与纵深防御",
+      "dir": "day14-提示注入防御",
+      "pages": 7
+    },
+    {
+      "day": 15,
+      "title": "Agent 身份（SPIFFE）",
+      "dir": "day15-Agent身份",
+      "pages": 7
+    },
+    {
+      "day": 16,
+      "title": "治理网关与 Agent 蔓延",
+      "dir": "day16-治理网关",
+      "pages": 7
+    },
+    {
+      "day": 17,
+      "title": "Agent 怎么学习进化",
+      "dir": "day17-学习进化",
+      "pages": 7
+    },
+    {
+      "day": 18,
+      "title": "实例：Co-Scientist / AlphaEvolve",
+      "dir": "day18-先进实例",
+      "pages": 7
+    }
+  ]
+}

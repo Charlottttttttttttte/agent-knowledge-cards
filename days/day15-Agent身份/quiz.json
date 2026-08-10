@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "SPIFFE 是干什么的？",
+   "options": [
+    "A. 给用户做认证",
+    "B. 给服务账号做授权",
+    "C. 给 Agent 签发可验证身份证书",
+    "D. 给数据库加密"
+   ],
+   "answer": 2,
+   "explain": "SPIFFE 是开放身份标准，给每个工作负载签发可验证身份证书——相当于给 Agent 发“数字护照”。"
+  },
+  {
+   "after": 6,
+   "q": "Agent 被攻破后，独立身份 + 最小权限的价值在于？",
+   "options": [
+    "A. 完全防止攻击",
+    "B. 缩小爆炸半径",
+    "C. 加快运行速度",
+    "D. 自动修复漏洞"
+   ],
+   "answer": 1,
+   "explain": "身份和权限不能让攻击不发生，但能把损失圈在权限范围内——爆炸半径变小，损失可控。"
+  }
+ ]
+}

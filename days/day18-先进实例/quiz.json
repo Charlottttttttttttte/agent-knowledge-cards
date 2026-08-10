@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "Co-Scientist 的产出是什么？",
+   "options": [
+    "A. 一篇论文",
+    "B. 一整片新假设（假设景观）",
+    "C. 一段代码",
+    "D. 一个实验报告"
+   ],
+   "answer": 1,
+   "explain": "Co-Scientist 不直接产出论文，而是围绕目标生成并评估一整片新假设——原文叫“假设景观”。"
+  },
+  {
+   "after": 6,
+   "q": "AlphaEvolve 的进化循环是？",
+   "options": [
+    "A. 生成→打分→优秀者启发下一代",
+    "B. 训练→测试→部署",
+    "C. 输入→输出",
+    "D. 提问→回答"
+   ],
+   "answer": 0,
+   "explain": "AlphaEvolve 把代码生成和自动评测接起来：生成候选代码→评测器打分→优秀方案启发下一代，循环迭代。"
+  }
+ ]
+}

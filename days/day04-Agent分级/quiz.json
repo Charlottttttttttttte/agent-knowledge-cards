@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "只会凭训练知识回答、查不了实时信息的“裸模型”，属于哪个级别？",
+   "options": [
+    "A. Level 0",
+    "B. Level 2",
+    "C. Level 3",
+    "D. Level 4"
+   ],
+   "answer": 0,
+   "explain": "裸模型就是 Level 0 核心推理系统：只有训练知识，像一本会说话的书，时事对它“失明”。"
+  },
+  {
+   "after": 6,
+   "q": "“一个项目经理 Agent 给一群专家 Agent 派活”，是哪个级别的典型场景？",
+   "options": [
+    "A. Level 1",
+    "B. Level 2",
+    "C. Level 3",
+    "D. Level 0"
+   ],
+   "answer": 2,
+   "explain": "Level 3 协作多 Agent 系统：一个项目经理带一群专家，把别的 Agent 当工具使，像一家公司。"
+  }
+ ]
+}

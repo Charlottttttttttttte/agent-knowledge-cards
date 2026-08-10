@@ -1,0 +1,37 @@
+{
+ "images": [
+  "page-01.webp",
+  "page-02.webp",
+  "page-03.webp",
+  "page-04.webp",
+  "page-05.webp",
+  "page-06.webp",
+  "page-07.webp"
+ ],
+ "quizzes": [
+  {
+   "after": 4,
+   "q": "Agent “老化”指的是什么？",
+   "options": [
+    "A. 硬件老化",
+    "B. 环境变化后性能随时间退化",
+    "C. 模型版本变旧",
+    "D. 被平台下线"
+   ],
+   "answer": 1,
+   "explain": "“老化”指环境变化后 Agent 性能随时间退化——不是硬件旧了，而是不跟着更新就跟不上世界。"
+  },
+  {
+   "after": 6,
+   "q": "Agent Gym 最大的特点是什么？",
+   "options": [
+    "A. 在生产环境里运行",
+    "B. 不在执行路径上，离线仿真试错",
+    "C. 只能训练小模型",
+    "D. 完全替代人类专家"
+   ],
+   "answer": 1,
+   "explain": "Agent Gym 是不在生产执行路径上的离线“健身房”，让 Agent 在仿真环境里反复试错、用合成数据压测。"
+  }
+ ]
+}
