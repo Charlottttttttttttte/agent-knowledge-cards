@@ -23,16 +23,13 @@
   #page{max-width:100vw;max-height:100vh;object-fit:contain;user-select:none;-webkit-user-drag:none;transition:opacity .18s;}
   #page.loading{opacity:.35;}
   /* 嵌入 iframe 时（personal-site 查看器）：卡片占满高度，裁掉左右多余留白，减少上下空白 */
-  body.in-iframe{overflow:hidden;}
-  body.in-iframe #stage{align-items:center;padding-top:0;}
-  body.in-iframe #page{max-height:none;height:calc(100vh - env(safe-area-inset-top) - 56px);width:100%;max-width:100vw;object-fit:cover;}
+  body.in-iframe{overflow:hidden;overflow-x:hidden;max-width:100vw;}
+  body.in-iframe #stage{align-items:center;padding-top:0;overflow:hidden;}
+  body.in-iframe #page{max-height:none;height:calc(100vh - env(safe-area-inset-top) - 56px);width:100vw;max-width:100vw;object-fit:cover;}
   .zone{position:fixed;top:0;bottom:0;width:30%;z-index:10;}
   #prev{left:0;} #next{right:0;}
-  .today-tag{display:inline-block;font-size:13px;color:var(--accent);background:rgba(255,255,255,.6);
-    border:1px dashed var(--accent);border-radius:10px;padding:2px 8px;margin-left:8px;}
-  #prev{left:0;} #next{right:0;}
-  #ind{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 12px);left:0;right:0;text-align:center;
-    font-size:13px;color:var(--gray);z-index:20;letter-spacing:1px;}
+  #ind{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 12px);right:16px;z-index:20;
+    font-size:13px;color:var(--gray);letter-spacing:1px;text-align:right;}
   #err{position:fixed;inset:0;display:none;align-items:center;justify-content:center;color:var(--gray);font-size:15px;padding:40px;text-align:center;}
   /* 自测页 */
   #quiz{position:fixed;inset:0;display:none;flex-direction:column;background:var(--paper);z-index:15;
@@ -186,8 +183,7 @@ function nav(d){
 function render(){
   const item=seq[pos], day=manifest.days[dayIdx];
   document.getElementById('dtitle').textContent='Day '+day.day;
-  const tag=(dayIdx===expectedDay()-1)?'<span class="today-tag">今日 · Day '+day.day+'</span> ':'';
-  document.getElementById('ind').innerHTML=tag+(pos+1)+' / '+seq.length;
+  document.getElementById('ind').textContent=(pos+1)+' / '+seq.length;
   if(item.type==='img'){
     quizEl.style.display='none'; extraEl.style.display='none'; img.style.display='block';
     if(img.getAttribute('src')!==item.src){
@@ -369,6 +365,7 @@ document.addEventListener('touchend',e=>{
   if(Math.abs(dx)>50) nav(dx<0?1:-1);
 },{passive:true});
 boot();
+
 
 </script>
 </body>
