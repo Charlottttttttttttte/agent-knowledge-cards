@@ -71,10 +71,15 @@
   .xsub{font-size:13px;color:var(--gray);line-height:1.7;margin-bottom:22px;}
   .xcard{background:#fffdf4;border:2px solid rgba(74,63,48,.28);border-radius:12px;
     padding:14px 16px 12px;margin-bottom:12px;}
-  .xcard-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px;}
+  .xcard-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:6px;}
   .xcard-name{font-size:16px;font-weight:700;color:var(--primary);}
-  .xcard-link{font-size:12px;color:var(--accent);white-space:nowrap;text-decoration:none;border:1px solid var(--accent);border-radius:8px;padding:2px 8px;}
-  .xcard-desc{font-size:14px;color:var(--ink);line-height:1.65;opacity:.85;}
+  .xcard-desc{font-size:14px;color:var(--ink);line-height:1.65;opacity:.85;word-break:break-word;overflow-wrap:break-word;}
+  /* 下一期预告 */
+  .xnext{margin-top:18px;background:var(--soft);border:2px dashed var(--primary);border-radius:12px;
+    padding:14px 16px 12px;}
+  .xnext-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--paper);
+    background:var(--primary);border-radius:999px;padding:2px 10px;margin-bottom:8px;}
+  .xnext-body{font-size:14px;color:var(--ink);line-height:1.7;}
   /* 拓展页时隐藏两侧翻页区，避免误触 */
 </style>
 </head>
@@ -205,15 +210,54 @@ function closeExtra(){ extraEl.style.display='none'; document.body.classList.rem
 function renderExtra(item){
   document.body.classList.add('showing-extra');
   extraEl.style.display='flex';
+  // 下一期预告（最后一期则提示结营）
+  const next = manifest.days[dayIdx+1];
+  const nextHtml = next
+    ? '<div class="xnext"><span class="xnext-tag">下一期预告</span><div class="xnext-body">明天 <b>Day '+next.day+' · '+next.title+'</b>——'+(nextTitleHint(next))+'</div></div>'
+    : '<div class="xnext"><span class="xnext-tag">🎓 结营</span><div class="xnext-body">28 期全部学完！回去翻翻错题本，把速查表补完整，Agent 这课就正式毕业了。</div></div>';
   extraEl.innerHTML=
     '<div class="xtag">📎 拓展 · LLM-WIKI</div>'+
-    '<div class="xtitle">想深入再看的关联概念</div>'+
-    '<p class="xsub">卡片只讲了一个点；下面是你在 Wiki 里消化过、和今天相关但没展开的内容。点「去读」跳到 Obsidian 原文。</p>'+
+    '<div class="xtitle">关联概念，接着看</div>'+
+    '<p class="xsub">下面是和你今天学的内容相关的 Wiki 概念——卡片没展开讲，这里直接给你讲明白。</p>'+
     item.items.map(x=>'<div class="xcard">'+
-      '<div class="xcard-head"><span class="xcard-name">'+x.name+'</span>'+
-      '<a class="xcard-link" href="'+x.link+'">去读 ↗</a></div>'+
+      '<div class="xcard-head"><span class="xcard-name">'+x.name+'</span></div>'+
       '<div class="xcard-desc">'+x.desc+'</div></div>').join('')+
-    '<button class="vbtn" onclick="closeExtra()">继续 →</button>';
+    nextHtml+
+    '<button class="vbtn" onclick="closeExtra()">完成 →</button>';
+}
+
+/* 下一期一句话钩子（从课表描述提取） */
+function nextTitleHint(day){
+  const hints = {
+    '2': '从「模型+工具+编排」到完整四要素，缺哪块都不行',
+    '3': '先想、再做、看了结果再想，Agent 的核心节拍',
+    '4': '从简单对话到自主多步，你处在哪一级',
+    '5': '模型太万能，窗口里放什么才是关键',
+    '6': '不同任务配不同模型，省成本又不掉链子',
+    '7': '开卷考试，减少幻觉、补上时效性',
+    '8': 'OpenAPI 是说明书，MCP 是 USB-C 插座',
+    '9': '草稿本与档案柜——转头就忘 vs 越用越懂你',
+    '10': '分工、协作、编排——一个不够就组队',
+    '11': '把「好不好」变成「多少分」',
+    '12': '让另一个模型打分，稳定又省人',
+    '13': 'Agent 之间握手协作，像人加入组织',
+    '14': '模型会被骗，两层防护一起兜底',
+    '15': '每个 Agent 一张身份证，谁能信谁',
+    '16': 'Agent 多了要管，别让它们失控',
+    '17': '自动实验循环，越用越强',
+    '18': '看看真正的 Agent 长什么样',
+    '19': '把 know-how 打包成可复用能力单元',
+    '20': '模型怎么调用工具、从对话到行动',
+    '21': '并行分解任务：10 人干 1 天 > 1 人干 10 天',
+    '22': '跨会话记住你：记录→压缩→回注',
+    '23': 'Zero-Shot / Few-Shot / 思维链，让模型听懂人话',
+    '24': '让 AI 自己写提示词，不懂术语也能用',
+    '25': '从开发到生产：延迟/成本/安全/可观测',
+    '26': 'core/memo/daily：按生命周期分层存',
+    '27': 'SKILL.md 结构、仓库管理与渐进式加载',
+    '28': '生产级组队：规划/记忆/工具/执行模块化',
+  };
+  return hints[String(day.day)] || '继续深入 Agent 的世界';
 }
 
 function renderQuiz(item){
@@ -325,6 +369,7 @@ document.addEventListener('touchend',e=>{
   if(Math.abs(dx)>50) nav(dx<0?1:-1);
 },{passive:true});
 boot();
+
 </script>
 </body>
 </html>
